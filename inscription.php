@@ -7,7 +7,12 @@ Autoloader::register();
 
 $sql = new Entitysql;
 
-
+$sql->inscription_user([
+    "email"=>"user@example",
+    "nom"=>"alexandre",
+    "prenom"=>"toto",
+    "password"=>"taratatata",
+]);
 session_start();
 
 ?>
