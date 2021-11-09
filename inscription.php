@@ -7,7 +7,6 @@ Autoloader::register();
 
 $sql = new Entitysql;
 
-var_dump($sql->lireun(1));
 
 session_start();
 
