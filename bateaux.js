@@ -25,8 +25,8 @@ window.onload = () => {
             div.innerHTML += 
             `
             <div class="card">
-            <h4>${item.prenom}</h4>
-            <h6>${item.nom}</h6>
+            <h4>${item.prenom} ${item.nom}</h4>
+            <h6>${item.nom_bateau}</h6>
             <h6>${item.gps}</h6>
             <p>${item.telephone}</p>
             <div class="carburant">
