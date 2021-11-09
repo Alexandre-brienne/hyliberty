@@ -1,5 +1,10 @@
-<?php 
-    session_start();
+<?php
+
+use App\Autoloader;
+require_once 'vendor/class/Autoloader.php';
+Autoloader::register();
+
+session_start();
 
 ?>
 
@@ -16,17 +21,18 @@
 
 <body>
     <form action="add_user.php" method="post">
+      
         <div>
             <label for="email"> adresse email </label>
             <input type="email" name="email" id="email">
         </div>
         <div>
             <label for="prenom"> prenom </label>
-            <input type="texte" name="prenom" id="prenom">
+            <input type="text" name="prenom" id="prenom">
         </div>
         <div>
             <label for="nom">nom </label>
-            <input type="texte" name="nom" id="nom">
+            <input type="text" name="nom" id="nom">
         </div>
         <div>
             <label for="pass">mot de passe </label>
