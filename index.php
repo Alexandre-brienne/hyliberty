@@ -10,6 +10,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
             <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,600;1,300&amp;display=swap" rel="stylesheet">
             <title>HyLiberty</title>
+
         </head>
         <body>
             <header>
@@ -27,5 +28,6 @@
                     </div>
                 </div>
             </div>
+            <script src="bateaux.js"></script>
         </body>
     </html>
