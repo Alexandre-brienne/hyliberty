@@ -6,7 +6,7 @@ use App\Security\Security;
 use App\entity\Entitysql;
 require_once 'vendor/class/Autoloader.php';
 Autoloader::register();
-
+$sql = new Entitysql;
 
 
 
@@ -20,6 +20,7 @@ if (!empty($_POST) and isset($_POST)) {
         $_SESSION['ERROR']['email'] = "email invalid";
         $error = true;
     }
+
 
 
     if (isset($_POST['pass']) and empty($_POST['pass'])) {
@@ -42,7 +43,10 @@ if (!empty($_POST) and isset($_POST)) {
         $error = true;
         $_SESSION['ERROR']['nom'] = "merci d'ecrire votre nom";
     }
-
+// $email = Security::protectedsql($_POST['email']);
+//     if ($sql->verifemail()) {
+//         # code...
+//     }
 
     
     
@@ -51,7 +55,7 @@ if (!empty($_POST) and isset($_POST)) {
             var_dump($_SESSION);
             header("Location: auth.php");
         }else{
-            $sql = new Entitysql;
+           
 
             
 

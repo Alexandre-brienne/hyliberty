@@ -7,7 +7,7 @@ class Security {
     static function protectedsql($sql) {
 
 
-       htmlspecialchars(strip_tags($sql));
+      return htmlspecialchars(strip_tags($sql));
 
 
     }
