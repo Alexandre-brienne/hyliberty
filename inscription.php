@@ -1,8 +1,13 @@
 <?php
 
 use App\Autoloader;
+use App\Entity\Entitysql;
 require_once 'vendor/class/Autoloader.php';
 Autoloader::register();
+
+$sql = new Entitysql;
+
+var_dump($sql->lireun(1));
 
 session_start();
 

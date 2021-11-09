@@ -31,6 +31,19 @@ class Entitysql extends Setupdo{
     }
 
 
+    public function lireun($id){
+        $sql = "SELECT * FROM `clients` INNER JOIN bateaux ON clients.id = bateaux.client_id WHERE clients.id = :id";
+        $query = $this->db->prepare($sql);
+
+        $query->bindParam(':id',$id,\PDO::PARAM_INT);
+        $query->execute();
+        return $query->fetch();
+
+
+
+
+    }
+
 
     // public function Lire(){
       
