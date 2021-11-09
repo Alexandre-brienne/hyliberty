@@ -8,6 +8,8 @@ require_once 'vendor/class/Autoloader.php';
 Autoloader::register();
 
 
+
+
 if (!empty($_POST) and isset($_POST)) {
 
     $error =  false;
@@ -74,3 +76,4 @@ if (!empty($_POST) and isset($_POST)) {
 
 
 }
+
