@@ -17,7 +17,7 @@
                 <h1 style="margin: 0px;">HyLiberty</h1>
             </header>
             <div class="container">
-                <div class="card">
+                <!-- <div class="card">
                     <h4>Nom Prénom</h4>
                     <h6>Nom du bateau</h6>
                     <h6>Location</h6>
@@ -26,7 +26,7 @@
                         <progress value="ARemplacer" max="100">Bar 1</progress><br>
                         <progress value="ARemplacer" max="100">Bar 2</progress>
                     </div>
-                </div>
+                </div> -->
             </div>
             <script src="bateaux.js"></script>
         </body>
