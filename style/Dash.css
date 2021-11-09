@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    font-family: 'Prompt', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    background-color: #144b90;
+    color: white;
+    box-shadow: 3px 5px 18px -7px #000000;
+}
+
+.container {
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 13vh;
+    margin-bottom: 10vh;
+    height: 20vh;
+    width: 30vh;
+    background-color: lightgray;
+    box-shadow: 3px 5px 18px -7px #000000;
+}
+
+.card progress {
+    width: 20vh;
+    
+}
+
