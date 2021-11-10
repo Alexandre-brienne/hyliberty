@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mar. 09 nov. 2021 à 15:38
+-- Généré le : mer. 10 nov. 2021 à 07:58
 -- Version du serveur :  5.7.24
 -- Version de PHP : 7.4.13
 
@@ -42,11 +42,11 @@ CREATE TABLE `bateaux` (
 --
 
 INSERT INTO `bateaux` (`id`, `matricule`, `nom_bateau`, `gps`, `hydrogene_1`, `hydrogene_2`, `client_id`) VALUES
-(2, 'var4589', 'maria', 'france', 20, 15, 1),
-(3, 'lotaer582', 'mysql2089', 'france', 10, 30, 4),
-(4, 'gobi', 'slender', 'france', 25, 50, 8),
-(5, 'france5896', 'marjorie', 'france', 80, 45, 5),
-(6, 'myriam', 'maria', 'france', 20, 25, 10);
+(2, 'DA-2G-93', 'Botha', 'france', 20, 15, 1),
+(3, 'WZ-G8-62', 'Emulous', 'france', 10, 30, 4),
+(4, 'CW-XK-Y2', 'Peregrine Prize', 'france', 25, 50, 8),
+(5, 'FN-ZZ-EF', 'The Aigle', 'france', 80, 45, 5),
+(6, 'IE-QO-4J', 'The Newton', 'france', 20, 25, 10);
 
 -- --------------------------------------------------------
 
@@ -77,7 +77,11 @@ INSERT INTO `clients` (`id`, `email`, `nom`, `prenom`, `password`, `telephone`) 
 (7, 'hobington6@nasa.gov', 'Obington', 'Océane', 'OAK2CIb', '8686589389'),
 (8, 'tluke7@reuters.com', 'Luke', 'Styrbjörn', 'zFw4xR', '5001468197'),
 (9, 'akilby8@spiegel.de', 'Kilby', 'Tú', 'hL4enWpzacGs', '1646843233'),
-(10, 'dfulham9@networksolutions.com', 'Fulham', 'Daphnée', 'mHsOXo7zmwF', '8108915695');
+(10, 'dfulham9@networksolutions.com', 'Fulham', 'Daphnée', 'mHsOXo7zmwF', '8108915695'),
+(21, '2raven3@toecye.com', 'leah', 'michel', '$argon2i$v=19$m=65536,t=4,p=1$aVp3NnlqUkFZaVlQUFhrWQ$7cv6u/oD66O4C8oSRTGi2oXKXuiFVMLlVzwP/yvqaSY', '0618821078'),
+(22, 'ymohamed7ob11o@epuber.site', 'alexis', 'jordan', '$argon2i$v=19$m=65536,t=4,p=1$L2MzTWh3aW1sbDRDWkxYaQ$PEWzXWJ5mrT8u3BA4iLIzL0evlrczjrbyPqa9TWXERE', '0644645534'),
+(23, '9houssembrin@virginiaintel.com', 'michel', 'lordon', '$argon2i$v=19$m=65536,t=4,p=1$UllTYUovY2FjbDlSOXFvWg$BHHP3qcWoEyfggf1NMEeD+gbUBQvjBlkC3Q5RUQDvH0', '0618821078'),
+(24, 'relie.nasser9@itlrodk.com', 'ricardo', 'michel', '$argon2i$v=19$m=65536,t=4,p=1$RldMMzY4U3JybG9ZNUJMdA$84g1wvCTw9neY22a7xF+ukJQKKcNmlkH31n+rO/uecM', '0618821078');
 
 --
 -- Index pour les tables déchargées
@@ -110,7 +114,7 @@ ALTER TABLE `bateaux`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Contraintes pour les tables déchargées
