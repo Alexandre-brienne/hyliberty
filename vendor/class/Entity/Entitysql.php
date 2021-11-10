@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Setup\Setupdo;
 use App\Param\Paramsql;
 use App\Security\Security;
+use App\Jwt\Jwt;
 
 
 
@@ -24,7 +25,7 @@ class Entitysql extends Setupdo
         $verif['prenom'] = Security::protectedsql($auth['prenom']);
         $verif['telephone'] = Security::protectedsql($auth['telephone']);
         $verif['password'] = password_hash($auth['password'], PASSWORD_ARGON2I);
-        var_dump($verif);
+
 
 
 
@@ -42,7 +43,9 @@ class Entitysql extends Setupdo
 
         $query->execute();
 
-        var_dump($query);
+        http_response_code(400);
+        echo json_encode(["message" => "ca marche"]);
+
     }
 
 
@@ -66,19 +69,42 @@ class Entitysql extends Setupdo
         return $query->fetch();
     }
 
-
-    public function verifuser_password($auth)
-    {
-        var_dump($auth);
+    public function lireuser($email){
         $sql = 'SELECT * FROM `clients` WHERE email = :email';
         $query = $this->db->prepare($sql);
-        $query->bindParam(':email', $auth['email']);
+        $query->bindParam(':email', $email);
         $query->execute();
-        $user = $query->fetch();
+        return $query->fetch();
+
+    }
+
+
+    public function verifuser_password($auth)
+    {   
+        $user = $this->lireuser($auth['email']);
         if ($user) {
             if (password_verify($auth['password'], $user['password'])) {
-                http_response_code(405);
-                echo json_encode(["message" => "ca marche"]);
+                $header = [
+                    "typ" => "JWT",
+                    "alg" => "hs256"
+                ];
+
+                $payload = [
+                    "id" => $user['id'],
+                    "email" => $user['email'],
+                    "password" => $user['password'],
+                    "nom" => $user['nom'],
+                    "prenom" => $user['prenom'],
+                    "telephone" => $user['telephone']
+
+                ];
+
+                $jwt = new JWT();
+                
+                
+                echo json_encode($jwt->generate($header,$payload,"taram"));
+
+
             } else {
                 http_response_code(405);
                 echo json_encode(["message" => "l'email n'existe pas ou mot de passe invalid"]);
