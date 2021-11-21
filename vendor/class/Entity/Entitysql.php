@@ -20,10 +20,10 @@ class Entitysql extends Setupdo
     {
 
         $verif = [];
-        $verif['email'] = Security::protectedsql($auth['email']);
-        $verif['nom'] = Security::protectedsql($auth['nom']);
-        $verif['prenom'] = Security::protectedsql($auth['prenom']);
-        $verif['telephone'] = Security::protectedsql($auth['telephone']);
+        $verif['email'] = Security::Antixss($auth['email']);
+        $verif['nom'] = Security::Antixss($auth['nom']);
+        $verif['prenom'] = Security::Antixss($auth['prenom']);
+        $verif['telephone'] = Security::Antixss($auth['telephone']);
         $verif['password'] = password_hash($auth['password'], PASSWORD_ARGON2I);
 
 
